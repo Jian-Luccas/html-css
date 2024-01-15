@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex021 - Cap.16</title>
+    <style>
+        h1 { /* <h1> elemento do tipo box-level */
+            background-color: lightgray;
+            height: 300px;
+            width: 300px;
+            /* height + width (altura + largura) - denominados de box-size */
+
+            border-width: 10px;
+            border-style: solid;
+            border-color: darkslategray;
+            /* shorthand: 
+            border: 10px solid darkslategray; 
+            */
+
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            /* shorthands:
+            padding: 10px 10px 10px 10px; - ordem obrigatória: top / right / bottom / left (sentido horário)
+            padding: 10px 10px; - simétrico - height e width (altura e largura/espessura)
+            padding: 10px; - simétrico (valores iguais)
+            */
+
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+            /* shorthands:
+            margin: 10px auto 10px auto; - centralização automática
+            margin: 10px 10px 10px 10px; - ordem obrigatória: top ->  right -> bottom -> left (sentido horário)
+            margin: 10px 10px; - simétrico height e width (altura e largura/espessura)
+            margin: 10px; simétrico (valores iguais)
+            */
+
+            outline-width: 5px;
+            outline-style: dashed;
+            outline-color: salmon;
+            /* shorthand:
+            outline: 5px dashed salmon;
+            */
+        } /*anatomia da caixa - margin | outline | border | padding | content */
+
+        h2 { /* <h2> elemento do tipo box-level */
+            width: 300px;
+            height: 50px;
+            border-width: 10px;
+            border-style: solid;
+            border-color: darkslategray;
+            margin: auto;
+        }
+
+        h3 { /* <h3> elemento do tipo box-level */
+            display: inline; /* altera a tipagem de caixa padrão */
+        }
+
+        a { /* <a> elemento do tipo inline-level */ 
+            border-width: 10px;
+            border-style: solid;
+            border-color: red;
+
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de caixas box-level</h1>
+    <p>Parágrafos também são exemplos de box-level, mas <a href="#">linkos são exemplos de caixas inline-level.</a> Vamos ver como tudo isso funciona</p>
+
+    <h2>box-centralizado auto</h2>
+    <h3>Troca tipagem de box-level para inline-level</h3>
+
+</body>
+</html>
