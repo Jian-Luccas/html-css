@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundo</title>
+    <style>
+        body {
+            font: 18px Arial;
+        }
+        
+        div {
+            width: 90%;
+            height: 400px;
+            border: 2px solid black;
+            background-image: url('../imagens/wallpaper003.jpg');
+            background-color: lightgray;
+        }
+
+        div#bg1 {
+            background-position: left top;
+        }
+
+        div#bg2 {
+            background-position: right bottom;
+        }
+
+        div#bg3 {
+            background-position: center top;
+        }
+
+        div#bg4 {
+            background-position: center center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Posição de um background</h1>
+
+    <h2>background-position: left top;</h2>
+    <div id="bg1"></div>
+
+    <h2>background-position: right bottom;</h2>
+    <div id="bg2"></div>
+
+    <h2>background-position: center top;</h2>
+    <div id="bg3"></div>
+
+    <h2>background-position: center center;</h2>
+    <div id="bg4"></div>
+</body>
+</html>
