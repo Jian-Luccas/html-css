@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela - Cap.21</title>
+    <style>
+        table {
+            width: 200px;
+            height: 50px;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        td {
+            border: 1px solid black;
+        }
+
+        col.c1 {
+            background-color: #E3C386;
+        }
+
+        col.c2 {
+            background-color: #DEA12F;
+        }
+
+        col.c3 {
+            background-color: #AC7C24;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <colgroup>
+            <col class="c1">
+            <col class="c2" span="2">
+            <col class="c3">
+            <col class="c1">
+        </colgroup>
+        
+        <tr>
+            <td>1A</td>
+            <td>1B</td>
+            <td>1C</td>
+            <td>1D</td>
+            <td>1E</td>
+        </tr>
+        
+        <tr>
+            <td>2A</td>
+            <td>2B</td>
+            <td>2C</td>
+            <td>2D</td>
+            <td>2E</td>
+        </tr>
+        
+        <tr>
+            <td>3A</td>
+            <td>3B</td>
+            <td>3C</td>
+            <td>3D</td>
+            <td>3E</td>
+        </tr>
+        
+        <tr>
+            <td>4A</td>
+            <td>4B</td>
+            <td>4C</td>
+            <td>4D</td>
+            <td>4E</td>
+        </tr>
+    </table>
+</body>
+</html>

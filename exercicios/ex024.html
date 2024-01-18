@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex024 - Cap.22</title>
+    <style>
+        .md1 {
+            width: 500px;
+            height: 500px;
+            border: 5px solid black;
+            border-radius: 15px;
+            box-shadow: 3px 3px 10px #0000006c;
+        }
+    </style>
+</head>
+<body>
+    <h1>Teste de iframe</h1>
+    <p>
+        Acesse o site
+        <iframe class="md1" src="https://cursoemvideo.com" frameborder="0" width="500" height="500" scrolling="auto">
+        <a href="https://cursoemvideo.com">[Seu navegador não suporta iframes]</a> <!-- não de uso obrigatório mas e interessante colocar o link caso o navegador do visitante não seja compatível com <iframe> --> 
+        </iframe> e faça muitos cursos!
+    </p>
+
+    <h2></h2>
+    <iframe src="../desafios/d014.html" width="500" height="400">
+        <p>Seu navegador não é compatível com a exibição desse recurso.</p>
+    </iframe>
+
+    <h2></h2>
+    <iframe srcdoc="<h2>Teste de Título</h2><p>Esse documento foi gerado dinamicamente</p><img src='cursoemvideo.png'>" frameborder="0">
+        <p>Seu navegador não é compatível com a exibição desse recurso.</p>
+    </iframe>
+
+    <h2>Direcionando novo conteúdo para um iframe</h2>
+    <iframe name="quadro" src="../desafios/d010.html">
+        <p>Seu navegador não é compatível com a exibição desse recurso.</p>
+    </iframe>
+
+    <p><a href="../desafios/d014.html" target="quadro">Abrir segundo site</a></p>
+    <p><a href="../desafios/d010.html" target="quadro">Retornar ao principal</a></p>
+
+    <h2>Sandbox</h2>
+    <iframe src="https://cursoemvideo.com" frameborder="0" width="400" height="400" scrolling="yes" sandbox="sandbox"></iframe><!-- com sandbox -->
+
+    <iframe src="https://cursoemvideo.com" frameborder="0" width="400" height="400" scrolling="yes"></iframe><!-- sem sandbox -->
+
+    <h2>Google Maps</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.488619758523!2d-46.68472682329235!3d-23.586803078782506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5744e0ebff5b%3A0x769bf4a32f914782!2sGoogle!5e0!3m2!1spt-BR!2sbr!4v1705608081596!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</body>
+</html>

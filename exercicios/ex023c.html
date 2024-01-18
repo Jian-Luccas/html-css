@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas - Cap.21</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        td, th {
+            border: 1px solid black;
+        }
+
+        /* 1º Tabela */
+        table#t1 {
+            width: 600px;
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        thead#th1 {
+            background-color: #636363;
+            color: white;
+        }
+
+        tbody#tb1 > tr:nth-child(odd) {
+            background-color: #dddddd;
+        }
+
+        /* 2º tabela */
+        table#t2 {
+            border-collapse: separate;
+            text-align: center;
+            vertical-align: middle;
+            width: 300px;
+            height: 200px;
+            font-weight: bolder;
+        }
+
+        /* 3º tabela */
+        table#t3 {
+            border-collapse: separate;
+            width: 300px;
+            height: 200px;
+            text-align: center;
+            vertical-align: middle;
+            font-weight: bolder;
+        }
+
+        /* 4º tabela */
+        table#t4 {
+            width: 350px;
+            height: 300px;
+            border-collapse: collapse;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        thead#th4 {
+            background-color: #636363;
+            color: white;
+        }
+
+        th.th4a {
+            padding: 5px;
+        }
+
+        th.th4 {
+            background-color: #636363;
+            color: white;
+            text-align: left;
+        }
+
+        td.td4a {
+            text-align: center;
+            background-color: #636363;
+            color: white;
+            font-weight: bolder;
+        }
+
+        td.l4 {
+            text-align: left;
+            padding: 5px;
+        }
+
+        tfoot#tf4 {
+            background-color: #636363;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <table id="t1">
+        <thead id="th1">
+            <tr>
+                <th scope="col">Grupo</th>
+                <th scope="col">Nomes</th>
+                <th scope="colgroup" colspan="3">Filmes Favoritos</th>
+            </tr>
+        </thead>
+
+        <tbody id="tb1">
+            <tr>
+                <td rowspan="3">Mulheres</td>
+                <td>Ana Maria Santos</td>
+                <td>Alien</td>
+                <td>Rambo</td>
+                <td>Vingadores</td>
+            </tr>
+
+            <tr>
+                <td>Beatriz Souza</td>
+                <td>Hulk</td>
+                <td>Inception</td>
+                <td>Batman</td>
+            </tr>
+
+            <tr>
+                <td>Cláudia Melo</td>
+                <td>Oblivion</td>
+                <td>Matrix</td>
+                <td>Big Hero</td>
+            </tr>
+
+            <tr>
+                <td rowspan="3">Homens</td>
+                <td>Bruno Mendonça</td>
+                <td>Intocáveis</td>
+                <td>Amnésia</td>
+                <td>Gladiador</td>
+            </tr>
+
+            <tr>
+                <td>Daniel Lourenço</td>
+                <td>Wall-E</td>
+                <td>Oldboy</td>
+                <td>Dangal</td>
+            </tr>
+
+            <tr>
+                <td>Fabiano Mota</td>
+                <td>Star Wars 5</td>
+                <td>Taxi Driver</td>
+                <td>Toy Story</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Segunda Tabela</h2>
+    <table id="t2">
+        <tr>
+            <td class="td2">1</td>
+            <td class="td2">2</td>
+            <td class="td2" rowspan="2">3</td>
+            <td class="td2">4</td>
+        </tr>
+
+        <tr>
+            <td class="td2">5</td>
+            <td class="td2">6</td>
+            <td class="td2">7</td>
+        </tr>
+
+        <tr>
+            <td class="td2" colspan="3">8</td>
+            <td class="td2">9</td>
+        </tr>
+
+        <tr>
+            <td class="td2" rowspan="2">10</td>
+            <td class="td2" colspan="2">11</td>
+            <td class="td2">12</td>
+        </tr>
+
+        <tr>
+            <td class="td2">13</td>
+            <td class="td2">14</td>
+            <td class="td2">15</td>
+        </tr>
+    </table>
+
+    <h2>Terceira Tabela</h2>
+    <table id="t3">
+        <tr>
+            <td class="td3" colspan="4">A</td>
+            <td class="td3" rowspan="4">B</td>
+        </tr>
+
+        <tr>
+            <td class="td3" rowspan="4">C</td>
+            <td class="td3">D</td>
+            <td class="td3">E</td>
+            <td class="td3">F</td>
+        </tr>
+
+        <tr>
+            <td class="td3">G</td>
+            <td class="td3">H</td>
+            <td class="td3">I</td>
+        </tr>
+
+        <tr>
+            <td class="td3">J</td>
+            <td class="td3">L</td>
+            <td class="td3">M</td>
+        </tr>
+
+        <tr>
+            <td class="td3" colspan="4">N</td>
+        </tr>
+    </table>
+
+    <!-- -->
+
+    <h2>Quarta Tabela</h2>
+    <table id="t4">
+        <thead id="th4">
+            <tr>
+                <th scope="col" class="th4a" rowspan="2">Área</th>
+                <th scope="col" class="th4a" rowspan="2">Disciplinas</th>
+                <th scope="colgroup" class="th4a" colspan="2">Notas</th>
+                <th scope="col" class="th4a" rowspan="2">Média</th>
+            </tr>
+            <tr>
+                <th scope="col" class="th4a">Nota 1</th>
+                <th scope="col" class="th4a">Nota 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="l4" rowspan="4">Exatas</td>
+                <td class="l4">Matemática</td>
+                <td class="td4">0.0</td>
+                <td class="td4">0.0</td>
+                <td class="td4">0.0</td>
+            </tr>
+
+            <tr>
+                <td class="l4">Física</td>
+                <td class="td4">0.0</td>
+                <td class="td4">0.0</td>
+                <td class="td4">0.0</td>
+            </tr>
+
+            <tr>
+                <td class="l4">Química</td>
+                <td class="td4">0.0</td>
+                <td class="td4">0.0</td>
+                <td class="td4">0.0</td>
+            </tr>
+
+            <tr>
+                <td class="l4">Biologia</td>
+                <td class="td4">0.0</td>
+                <td class="td4">0.0</td>
+                <td class="td4">0.0</td>
+            </tr>
+
+            <tr>
+                <th scope="row" class="th4" colspan="4">Média de Exatas</th>
+                <td class="td4a">0.0</td>
+            </tr>
+
+            <tr>
+                <td class="l4" rowspan="2">Humanas</td>
+                <td class="l4">História</td>
+                <td class="td4">0.0</td>
+                <td class="td4">0.0</td>
+                <td class="td4">0.0</td>
+            </tr>
+
+            <tr>
+                <td class="l4">Geografia</td>
+                <td class="td4">0.0</td>
+                <td class="td4">0.0</td>
+                <td class="td4">0.0</td>
+            </tr>
+
+            <tr>
+                <th scope="row" class="th4" colspan="4">Média de Humanas</th>
+                <td class="td4a">0.0</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
