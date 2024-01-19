@@ -5,13 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ex024 - Cap.22</title>
     <style>
+        body {
+            margin: auto;
+            text-align: center;
+        }
+
         .md1 {
             width: 500px;
-            height: 500px;
+            height: 300px;
             border: 5px solid black;
             border-radius: 15px;
             box-shadow: 3px 3px 10px #0000006c;
+            display: block;
+            margin: auto;
         }
+
+        iframe.repos {
+            width: 80vw;
+            height: 300px;
+        } /* caso tenha configurações no html as configurações de CSS prevalecem */
     </style>
 </head>
 <body>
@@ -19,7 +31,7 @@
     <p>
         Acesse o site
         <iframe class="md1" src="https://cursoemvideo.com" frameborder="0" width="500" height="500" scrolling="auto">
-        <a href="https://cursoemvideo.com">[Seu navegador não suporta iframes]</a> <!-- não de uso obrigatório mas e interessante colocar o link caso o navegador do visitante não seja compatível com <iframe> --> 
+        <a href="https://cursoemvideo.com" target="_blank" rel="external">[Seu navegador não suporta iframes]</a> <!-- não de uso obrigatório mas e interessante colocar o link caso o navegador do visitante não seja compatível com <iframe> --> 
         </iframe> e faça muitos cursos!
     </p>
 
@@ -48,5 +60,9 @@
 
     <h2>Google Maps</h2>
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.488619758523!2d-46.68472682329235!3d-23.586803078782506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5744e0ebff5b%3A0x769bf4a32f914782!2sGoogle!5e0!3m2!1spt-BR!2sbr!4v1705608081596!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <h2>Repositório Guanabara</h2>
+    <!-- Tamanho padrão 300x150 -->
+    <iframe class="repos" src="https://gustavoguanabara.github.io" frameborder="0" height="300px" width="500px"><a href="https://gustavoguanabara.github.io" target="_blank" rel="external">Curso em Vídeo</a></iframe>
 </body>
 </html>
