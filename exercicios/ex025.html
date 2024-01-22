@@ -169,5 +169,42 @@
 
         <p><input type="submit" value="Enviar"></p>
     </form>
+
+    <br>
+
+    <!-- -->
+
+    <h1>Teste de Formulário</h1>
+    <form action="ex025-cad.php" method="get" autocomplete="on">
+        <p>
+            <label for="inam">Nome</label>
+            <input type="text" name="name" id="inam" required maxlength="30" placeholder="Nome completo" autocomplete="name">
+        </p>
+
+        <p>
+            <label for="imed">Média</label>
+            <input type="number" name="med" id="imed" min="0" max="10" placeholder="0 a 10" step="0.1" value="5" required>
+        </p>
+
+        <p>
+            <label for="iper">Período Letivo</label>
+            <input type="month" name="per" id="iper" value="2024-01">
+        </p>
+
+        <p>
+            <label for="idp">Dia da Prova:</label>
+            <input type="date" name="dp" id="idp" value="2024-01-22">
+        </p>
+
+        <p>
+            <label for="ihp">Hora da Prova: </label>
+            <input type="time" name="hp" id="ihp">
+        </p>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
 </body>
 </html>
