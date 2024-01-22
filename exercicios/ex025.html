@@ -6,7 +6,43 @@
     <title>ex025 - Cap.24</title>
 </head>
 <body>
-    <form method="GET" action="cadastro.php">
+    <h1>Meu primeiro formulário</h1>
+    <form action="ex025-cad.php" method="get" autocomplete="off"><!-- remove a sugestão de texto -->
+        <p><label for="nome">Nome: </label>
+            <input type="text" name="nome" id="nome"></p>
+        <p><label for="sobrenome">Sobrenome: </label>
+            <input type="text" name="sobrenome" id="sobrenome"></p>
+        <p><input type="submit" value="Enviar"></p>
+    </form>
+
+    <br>
+
+    <!-- -->
+
+    <h1>Teste de Formulário</h1>
+    <form action="ex025-cad.php" method="post" autocomplete="on">
+        <p>
+            <label for="iusu">Usuário: </label>
+            <input type="text" name="usu" id="iusu" required minlength="5" maxlength="15" size="15" autocomplete="username">
+        </p>
+
+        <p>
+            <label for="isen">Senha: </label>
+            <input type="password" name="sen" id="isen" required minlength="8" size="12" autocomplete="current-password">
+        </p>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+
+    <br>
+
+    <!-- -->
+
+    <h2>GET</h2>
+    <form method="GET" action="ex025-cad.php">
         <label for="camponome">Nome:</label>
         <input type="text" name="fnome" id="camponome">
         <input type="submit" value="Enviar">
@@ -56,9 +92,12 @@
         <input type="reset" value="Limpar"></p>
     </form>
 
+    <br>
+
     <!-- 2º Form-->
 
-    <form action="cadastro.php" method="get">
+    <h2>datalist</h2>
+    <form action="ex025-cad.php" method="get">
         <p><label for="imod">Modelo de celular:</label>
         <select name="modelo" id="imod">
             <option value="">Escolha...</option>
@@ -109,11 +148,13 @@
         <p><input type="Submit" value="Enviar"></p>
     </form>
 
+    <br>
+
     <!-- 3º Form (Output) -->
 
     <h2>Output</h2>
 
-    <form action="cadastro.php" method="get" oninput="itot.value = Number(ipreco.value) * Number (iquant.value)">
+    <form action="ex025-cad.php" method="get" oninput="itot.value = Number(ipreco.value) * Number (iquant.value)">
         <p><label for="iprod">Produto:</label>
         <input type="text" name="prod" id="iprod"></p>
 
