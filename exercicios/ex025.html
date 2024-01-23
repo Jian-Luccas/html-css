@@ -261,5 +261,31 @@
             <input type="reset" value="Limpar">
         </p>
     </form>
+
+    <!-- -->
+    <br>
+
+    <h1>Exemplo 3 - "cor" / "range" / "file"</h1>
+    <form action="ex025-cad.php" method="post" autocomplete="on">
+        <p>
+            <label for="icor2">Cor: </label>
+            <input type="color" name="cor2" id="icor2" value="#00ff00">
+        </p>
+
+        <p>
+            <label for="in">Nível de Satisfação: </label>
+            <input type="range" name="n" id="in" min="1" max="5" value="2">
+        </p>
+
+        <p>
+            <label for="if">Foto do Perfil:</label>
+            <input type="file" name="f" id="if" > <!-- sempre que precisar enviar um arquivo com tamanho superior a 3mb e necessário utilizar o method="post" -->
+        </p>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
 </body>
 </html>
