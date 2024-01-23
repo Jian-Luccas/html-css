@@ -369,6 +369,50 @@
     <!---->
     <br>
 
-    <h1></h1>
+    <h1>Exemplo - "output"</h1>
+    <form action="ex025-cad.php" method="get" autocomplete="on">
+        <p>
+            <label for="in1">Número 1: </label>
+            <input type="number" name="n1" id="in1" min="0" max="50" required oninput="isom.innerHTML = Number(in1.value) + Number(in2.value)">
+        </p>
+
+        <p>
+            <label for="in2">Número 2: </label>
+            <input type="number" name="n2" id="in2" min="0" max="50" required oninput="isom.innerHTML = Number(in1.value) + Number(in2.value)">
+        </p>
+
+        <p>
+            <label for="isom">Soma: </label>
+            <output name="som" id="isom">0</output> <!-- utilizado só para visualizar/demonstrar para o visitante - não envia os dados no formulário -->
+        </p>
+
+        <p>
+            <label for="inume">Número: </label>
+            <input type="range" name="nume" id="inume" min="0" max="10" value="5" oninput="ival.innerHTML = Number(inume.value)">
+            <output id="ival">5</output>
+        </p>
+
+        <p>
+            <label for="iano2">Em que ano você nasceu? </label>
+            <input type="number" name="ano2" id="iano2" min="1900" max="2024" oninput="calcIdade()"><!--função criada para calcular a idade-->
+        </p>
+
+        <p>
+            <label for="iidad">Sua idade é: </label>
+            <output id="iidad">0</output>
+        </p>
+        
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+
+    <script>
+        function calcIdade() {
+            let atual = new Date().getFullYear()
+            iidad.innerHTML = Number(atual) - Number(iano2.value)
+        }
+    </script>
 </body>
 </html>
